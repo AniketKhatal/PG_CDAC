@@ -1,6 +1,0 @@
-#include<iotsream>
-using namespace std;
-int main(){
-	cout<<"Hii Rocket!!";
-	return 0;
-}
