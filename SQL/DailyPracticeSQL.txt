@@ -33,4 +33,33 @@ select count(*) as total_patients from patients where year(birth_date)=2010;
 select first_name,last_name,max(height) from patients;
 SELECT first_name, last_name, height FROM patients ORDER BY height DESC LIMIT 1;
 
+11.Show all columns for patients who have one of the following patient_ids: 1,45,534,879,1000
+select * from patients where patient_id in(1,45,534,879,1000);
 
+12.Show the total number of admissions
+select count(*) as totalnumaddmission from admissions;
+
+13.Show all the columns from admissions where the patient was admitted and discharged on the same day.
+select * from admissions where admission_date=discharge_date;
+
+14.Show the patient id and the total number of admissions for patient_id 579.
+select patient_id,count(*) from admissions where patient_id=579;
+
+15.Based on the cities that our patients live in, show unique cities that are in province_id 'NS'?
+Based on the cities that our patients live in, show unique cities that are in province_id 'NS'?
+
+16.Write a query to find the first_name, last name and birth date of patients who has height greater than 160 and weight greater than 70
+select first_name,last_name,birth_date from patients where height > 160 and weight > 70;
+
+17.Write a query to find list of patients first_name, last_name, and allergies where allergies are not null and are from the city of 'Hamilton'
+select first_name,last_name,allergies  from patients where city='Hamilton' and allergies is not NULL;
+
+18.Show unique first names from the patients table which only occurs once in the list.     ****
+select first_name from patients group by first_name having count(first_name)=1;
+
+19.Show patient_id and first_name from patients where their first_name start and ends with 's' and is at least 6 characters long.
+select patient_id,first_name from patients where first_name like 's%____%s';
+
+20.Show patient_id, first_name, last_name from patients whos diagnosis is 'Dementia'. 
+Primary diagnosis is stored in the admissions table.
+select p.patient_id,p.first_name,p.last_name from patients p inner join admissions a on p.patient_id=a.patient_id where diagnosis='Dementia'; 
