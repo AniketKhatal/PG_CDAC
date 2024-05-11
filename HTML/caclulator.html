@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator</title>
+</head>
+<body></body>
+<script>
+    
+    function getoperation(){
+        const operation=prompt("Choose an operation: +, -, *, /");
+        return operation;
+    }
+
+    //Function   for the perform the calulation based on the user input
+    function cal(operation,num1,num2){
+        switch(operation){
+            case "+":
+                return num1 + num2;
+                break;
+            case "-":
+                return num1 - num2;
+                break;
+            case "*":
+                return num1 * num2;
+                break;
+            case "/":
+                //to check the num 2 is zero
+                 if(num2 == 0){
+                    return "cannot divide by zero";
+                 }
+                    return num1  /num2;
+                 break;
+            default:
+                return "Invalid Operation";
+                break;
+            
+        }
+    }
+
+    //main function like
+    let n1=parseInt(prompt("Enter the number 1:"));
+    let n2=parseInt(prompt("Enter the number 2:"));
+    let operation=getoperation();
+    let result=cal(operation,n1,n2);
+    alert("Result:"+result);
+
+</script>
+</html>
