@@ -90,3 +90,6 @@ select first_name,last_name,'Patient' as role from patients union all select fir
 select allergies,COUNT(*) AS total_diagnosis FROM patients where allergies is NOT NULL group by allergies 
 order by total_diagnosis desc;
 
+//clauses,groupby having by
+//difference between where and having clauses
+//group by ,order by
