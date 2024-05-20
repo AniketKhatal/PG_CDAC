@@ -6,7 +6,7 @@ let transport=mailer.createTransport({
     service:'gmail',
     auth:{
         user:'heyaniketkhatal@gmail.com',
-        pass:'#Aniket@321'
+        pass:'tyiyiuqxvigrpgno'
     }
 })
 
@@ -24,3 +24,5 @@ transport.sendMail(messgaeOb,(error, info) => {
             console.log(info.response);
         }
 });
+
+//tyiy iuqx vigr pgno
