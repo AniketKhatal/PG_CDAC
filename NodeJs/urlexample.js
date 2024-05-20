@@ -1,5 +1,5 @@
 const http=require('http');
-const url=require('url')
+const url=require('url');
 
 //url.parse()
 http.createServer((req,resp)=>{
