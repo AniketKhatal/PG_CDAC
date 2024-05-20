@@ -5,8 +5,8 @@ const mailer=require('nodemailer');
 let transport=mailer.createTransport({
     service:'gmail',
     auth:{
-        user:'heyaniketkhatalemail@gmail.com',
-        pass:'#Aniket@123'
+        user:'heyaniketkhatal@gmail.com',
+        pass:'#Aniket@321'
     }
 })
 
@@ -20,7 +20,7 @@ transport.sendMail(messgaeOb,(error, info) => {
     if (error) {
         console.log(error);
         } else {
-            console.log('Email sent: ' + info.response);
+            console.log("Email sent:");
             console.log(info.response);
         }
 });
