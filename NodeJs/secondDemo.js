@@ -1,17 +1,30 @@
 //http
 const http= require("http");
 
-const server=http.createServer((req,resp) =>{
+// const server=http.createServer((req,resp) =>{
+//     //req: request process
+//     //resp:for writting response
+
+//     resp.writeHead(200,{"content-type":"text/html"});
+//     resp.write("<h1>Wow this is response from first created server</h1>");
+//     resp.write("<h2>Okk thats nice</h2>");
+//     resp.write("<button>Hit me</button>")
+//     resp.end("Ok Ok ");
+// });
+// // one way
+// server.listen(3001);
+
+
+//another way
+http.createServer((req,resp) =>{
     //req: request process
     //resp:for writting response
 
     resp.writeHead(200,{"content-type":"text/html"});
     resp.write("<h1>Wow this is response from first created server</h1>");
     resp.write("<h2>Okk thats nice</h2>");
-    resp.write("<button>clickME</button>")
     resp.end("Ok Ok ");
-});
-server.listen(3001);
+}).listen(3001);
 
 
 // how to run the node js program
