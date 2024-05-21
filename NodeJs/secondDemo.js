@@ -8,6 +8,7 @@ const server=http.createServer((req,resp) =>{
     resp.writeHead(200,{"content-type":"text/html"});
     resp.write("<h1>Wow this is response from first created server</h1>");
     resp.write("<h2>Okk thats nice</h2>");
+    resp.write("<button>clickME</button>")
     resp.end("Ok Ok ");
 });
 server.listen(3001);
