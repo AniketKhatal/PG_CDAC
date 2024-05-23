@@ -4,4 +4,4 @@
 //create statement/prepared statement
 //execute sql statement 
 //process the result
-//close the connection
+//close the connection 
