@@ -1,4 +1,6 @@
-import akbutton from "./akbutton";
+import akbutton from "./akbutton.jsx";
+import Hello from "./hello.jsx";
+import Random from "./Random.jsx";
 
 function app(){
   return <div>
@@ -9,6 +11,8 @@ function app(){
   </h1>
   <button>Hit me</button>
   <akbutton></akbutton>
+  <Random></Random>
+  <Hello></Hello>
   </div>
 }
 
