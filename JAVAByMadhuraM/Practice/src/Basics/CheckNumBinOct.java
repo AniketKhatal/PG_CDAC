@@ -33,7 +33,7 @@ public static void main(String[] args) {
         System.out.println("Given number is decimal");
     }
     else if(num.matches("[0-9A-Za-z]+")){
-        System.out.println("Given number is the hexadecimal");
+        System.out.println("Given number is the hexadecimal"); // This will print the hexadecimal number if the condition is true
     }
     else{
         System.out.println("Number is negavtive");
