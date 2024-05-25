@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import "bootstrap/dist/css/bootstrap.min.css";
-import AppName from './components/AppName';
-import AddTodo from './components/AddTodo';
-import Todoitem1 from './components/Todoitem1';
-import Todoitem2 from './components/Todoitem2';
+import AppName from "./components/AppName";
+import AddTodo from "./components/AddTodo";
+import TodoItem1 from "./components/TodoItem1";
+import TodoItem2 from "./components/TodoItem2";
+import "./App.css";
 
 function App() {
-  return <center class='todo-container'>
-    <AppName></AppName><hr></hr>
-    <AddTodo></AddTodo>
-    <Todoitem1></Todoitem1>
-    <Todoitem2></Todoitem2>
-  </center>
+  return (
+    <center className="todo-container">
+      <AppName /><hr></hr>
+      <AddTodo />
+      <div className="items-container">
+        <TodoItem1></TodoItem1>
+        <TodoItem2></TodoItem2>
+      </div>
+    </center>
+  );
 }
 
-export default App
+export default App;
