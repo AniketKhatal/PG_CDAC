@@ -59,6 +59,7 @@ CMD [ "npm","run","dev" ]
 # RUN npm i -g nodemon
 # to crate the volume
 # docker run --name basic-container -p 8800:8800 --rm -v "D:/PG_CDA/PG_DAC/Docker:/app" basic-app
+# sirs comand for ru ning volume
 
 # AS we go along with our project the docker command get complex n it hard to remember that command n thats why docker come up with 
 # yaml file in which we write all complex command =>docker.yaml
