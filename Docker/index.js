@@ -12,21 +12,32 @@ app.get("/",(req,resp)=>{
     resp.json([
         {
             id:11,
-            name:"Mayur",
+            name:"Mayur Ashok Khatal",
             age:33
         },
         {
             id:2,
-            name:"Lakshayaman",
+            name:"Lakshayaman Dasharath Ayodyavasi",
             age:34
         },
         {
             id:5,
-            name:"Manoj",
+            name:"Manoj Dilip khatal",
             age:28
+        },
+        {
+            id:6,
+            name:"Tushar Dilip Khatal",
+            age:"28"
         }
     ]);
 });
 app.listen(8800,()=>{
     console.log("App is running on port 8800");
 });
+
+
+
+
+
+ 
