@@ -71,7 +71,7 @@ CMD [ "npm","run","dev" ]
 #         - 8800:8800
             #  To run the compose yaml file ==> docker compose up
 
-
+cvcv
 # Share your image in docker hub
 # login into the dockerhub -> create repo -> see docker push command copy that middle appnm(heyak/node-pract-app) ->
 # open project terminal -> type command docker build -t heyak/node-pract-app .   -> it will create the image ->
