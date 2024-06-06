@@ -1,4 +1,4 @@
-package RandomQue;
+package Randomque;
 /*
 I/p:
  num=5
@@ -7,7 +7,8 @@ I/p:
  arr={1,-8,2,-9,7}
  */
 
- import java.util.*;
+ import java.util.ArrayList;
+import java.util.Scanner;
 class PosiPattern{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
