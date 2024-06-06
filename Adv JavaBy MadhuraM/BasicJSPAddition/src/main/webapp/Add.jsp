@@ -12,12 +12,12 @@ int a,b,c;
 %>
 <%
     try {
-        int a = 100;
-        int b = 200;
-        int c = a + b;
+         a = 100;
+         b = 200;
+         c = a + b;
         out.println("<h1>The Addition is: " + c + "</h1>");
     } catch (Exception e) {
-       // e.printStackTrace(out);
+  		out.println(e.getStackTrace()); 
     }
 %>
 <h1>The Addition is &nbsp; <%=c%></h1>
