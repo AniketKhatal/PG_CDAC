@@ -19,6 +19,7 @@ public class Anagram {
                     count++;
                     str2[j]='\0';
                     break;
+
                 }
             }
         }
