@@ -29,9 +29,10 @@
 			//pwd valid ,store user details under session scope
 			session.setAttribute("user_dtls", user);
 			//redirect + URL rewriting(encoding)
-			RequestDispetcher dr=request.
-			response.sendRedirect(
-					response.encodeRedirectURL("details.jsp"));
+			RequestDispatcher dr=request.getRequestDispatcher("details.jsp");
+			dr.forward(request, response);
+		//	response.sendRedirect(
+		//			response.encodeRedirectURL("details.jsp"));
 
 		} else {
 	%>

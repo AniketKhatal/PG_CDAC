@@ -8,7 +8,7 @@ I/p:
  */
 
  import java.util.*;
- public class PosiNegPattFromArray{
+class PosiPattern{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the Size of the Array:");
@@ -38,6 +38,19 @@ I/p:
         while(positive<posi.size() && negative<nega.size()){
             arr[index++]=posi.get(positive++);
             arr[index++]=nega.get(negative++);
+        }
+        while(positive<posi.size()){
+            arr[index++]=posi.get(positive++);
+        }
+
+        while(positive<posi.size()){
+            arr[index++]=nega.get(negative++);  
+        }
+
+        //Lets pritn the output
+        System.out.println("The array is :");
+        for(int i=0 ; i<arr.length ; i++){
+            System.out.println(arr[i]);
         }
     }
  }
