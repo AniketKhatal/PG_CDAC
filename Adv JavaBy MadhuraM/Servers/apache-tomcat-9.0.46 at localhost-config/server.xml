@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="TodayDate" path="/TodayDate" reloadable="true" source="org.eclipse.jst.jee.server:TodayDate"/><Context docBase="BasicJSPAddition" path="/BasicJSPAddition" reloadable="true" source="org.eclipse.jst.jee.server:BasicJSPAddition"/><Context docBase="VoterRegi" path="/VoterRegi" reloadable="true" source="org.eclipse.jst.jee.server:VoterRegi"/><Context docBase="day3.1" path="/day3.1" reloadable="true" source="org.eclipse.jst.jee.server:day3.1"/></Host>
+      <Context docBase="TodayDate" path="/TodayDate" reloadable="true" source="org.eclipse.jst.jee.server:TodayDate"/><Context docBase="BasicJSPAddition" path="/BasicJSPAddition" reloadable="true" source="org.eclipse.jst.jee.server:BasicJSPAddition"/><Context docBase="VoterRegi" path="/VoterRegi" reloadable="true" source="org.eclipse.jst.jee.server:VoterRegi"/><Context docBase="day3.1" path="/day3.1" reloadable="true" source="org.eclipse.jst.jee.server:day3.1"/><Context docBase="day6.1" path="/day6.1" reloadable="true" source="org.eclipse.jst.jee.server:day6.1"/></Host>
     </Engine>
   </Service>
 </Server>
