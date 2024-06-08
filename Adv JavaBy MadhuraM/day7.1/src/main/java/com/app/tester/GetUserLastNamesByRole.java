@@ -1,6 +1,6 @@
 package com.app.tester;
 
-import static com.app.utils.HibernateUtils.getFactory;
+import static com.app.utils.HibernateUtils.getFactory; 
 
 import java.time.LocalDate;
 import java.util.Scanner;

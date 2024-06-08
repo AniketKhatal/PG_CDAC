@@ -1,6 +1,6 @@
 package com.app.utils;
 
-import org.hibernate.*;
+import org.hibernate.*; 
 import org.hibernate.cfg.Configuration;
 
 /*

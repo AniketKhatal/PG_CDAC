@@ -1,9 +1,9 @@
 package com.app.entities;
-//users table 
+//users table  
 
 //column - id , first name , last name, email ,password , dob , phone no , role
 
-import java.time.LocalDate;
+import java.time.LocalDate;  
 import javax.persistence.*;
 
 @Entity //to tell hibernate following class is an entity , 
