@@ -16,7 +16,7 @@ public class RegisterNewCategory {
 			CategoryDao dao = new CategoryDaoImpl();
 			System.out.println("Enter Category details -  Category Name" + "  "
 					+ "Category Description");
-			Category newcategory = new Category(sc.next(), sc.nextLine());
+			Category newcategory = new Category(sc.next().toLowerCase(), sc.nextLine());
 			System.out.println(dao.createcategory(newcategory));
 		} catch (Exception e) {
 		e.printStackTrace();

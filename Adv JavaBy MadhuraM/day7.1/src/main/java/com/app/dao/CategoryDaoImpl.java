@@ -71,24 +71,26 @@ public class CategoryDaoImpl implements CategoryDao {
 
 	@Override
 	public Category getCategoryByName(String pname) {
-		Category category = null;
-		// 1. get Session from SF
-		String jpql = "select c from Category c where c.name=:pname";
-		Session session = getFactory().getCurrentSession();
-		// 2. Begin Tx
-		Transaction tx = session.beginTransaction();
-		try {
-			category = (Category) session.createQuery(jpql, User.class);
-			// user : persistent
-			tx.commit();
-		} catch (RuntimeException e) {
-			if (tx != null)
-				tx.rollback();
-			// re throw the same exc to the caller
-			throw e;
-		}
+	    Category category = null;
+	    // 1. get Session from SF
+	    String jpql = "select c from Category c where c.name=:pname";
+	    Session session = getFactory().getCurrentSession();
+	    // 2. Begin Tx
+	    Transaction tx = session.beginTransaction();
+	    try {
+	        category = (Category) session.createQuery(jpql, Category.class)
+	                .setParameter("pname", pname)
+	                .getSingleResult();
+	        // category : persistent
+	        tx.commit();
+	    } catch (RuntimeException e) {
+	        if (tx != null)
+	            tx.rollback();
+	        // re throw the same exception to the caller
+	        throw e;
+	    }
 
-		return category; // user : detached from L1 cache
+	    return category; // category : detached from L1 cache
 	}
-
 }
+

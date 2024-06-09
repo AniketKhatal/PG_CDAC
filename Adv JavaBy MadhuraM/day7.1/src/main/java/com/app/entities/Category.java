@@ -13,10 +13,11 @@ public class Category {
 	private String name;
 	
 	@Column(name="description",length=200)
-	private String descrition;
+	private String description;
 	
-	public Category(String next, String next2) {
-		// TODO Auto-generated constructor stub
+	public Category(String name, String descrption) {
+		this.name=name;
+		this.description=description;
 	}
 
 	//Getter And Setter
@@ -32,12 +33,12 @@ public class Category {
 		this.name = name;
 	}
 
-	public String getDescrition() {
-		return descrition;
+	public String getdescription() {
+		return description;
 	}
 
-	public void setDescrition(String descrition) {
-		this.descrition = descrition;
+	public void setdescription(String description) {
+		this.description = description;
 	}
 
 	public void setId(Long id) {
@@ -46,7 +47,7 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", descrition=" + descrition + "]";
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + "]";
 	}
 
 	public Category() {
