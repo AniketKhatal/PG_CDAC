@@ -1,6 +1,7 @@
 package com.blogs.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,31 +20,39 @@ public class CategoryServiceImpl implements CategoryService {
 	// depcy - dao
 	@Autowired
 	private CategoryRepository categoryRepository;
-	
+
 	@Autowired
 	private ModelMapper mapper;
 
 	@Override
-	public List<Category> getAllCategories() {
-		// TODO Auto-generated method stub
-		return categoryRepository.findAll();
+	public List<CategoryDTO> getAllCategories() {
+		// ret List<DTO>
+		return categoryRepository.findAll() // List<Category>
+				.stream() // Stream<Category>
+				.map(entity -> mapper.map(entity, CategoryDTO.class)) // Stream<DTO>
+				.collect(Collectors.toList());// List<DTO>
 	}
 
 	@Override
-	public Category addNewCategory(Category category) {
-		// TODO Auto-generated method stub
-		return categoryRepository.save(category);// rets persistent
-	}// rets DETACHED entity to the caller
+	public CategoryDTO addNewCategory(CategoryDTO categoryDto) {
+		// dto -> entity
+		Category entity = 
+				mapper.map(categoryDto, Category.class);
+		//persist entity --> persistent entity --> dto
+		return mapper.map(categoryRepository.save(entity),
+				CategoryDTO.class);
+				// rets dto (containing id , cr date , update ts ->  to the caller
 	/*
 	 * returning from @Transactional -> session.flush -> insert -> session.close
 	 */
+	}
 
 	@Override
 	public CategoryDTO getCategoryById(Long id) {
 
-		 Category category = categoryRepository.findById(id) // Optional<Category>
+		Category category = categoryRepository.findById(id) // Optional<Category>
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid Category Id !!!!"));
-		 return mapper.map(category, CategoryDTO.class);
+		return mapper.map(category, CategoryDTO.class);
 	}
 
 	@Override
@@ -61,10 +70,11 @@ public class CategoryServiceImpl implements CategoryService {
 
 	@Override
 	public ApiResponse deleteCategoryDetails(Long id) {
-		Category category = categoryRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Invalid Category ID!!!"));
-		//id valid
+		Category category = categoryRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Invalid Category ID!!!"));
+		// id valid
 		categoryRepository.delete(category);
-		return new ApiResponse("Category deleted : id "+id);
+		return new ApiResponse("Category deleted : id " + id);
 	}
 
 }

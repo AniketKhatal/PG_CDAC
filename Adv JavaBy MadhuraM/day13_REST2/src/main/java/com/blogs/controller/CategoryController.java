@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blogs.dtos.ApiResponse;
+import com.blogs.dtos.CategoryDTO;
 import com.blogs.entities.Category;
 import com.blogs.service.CategoryService;
 
@@ -30,13 +31,15 @@ public class CategoryController {
 	}
 
 	/*
-	 * desc - get all categories URL - http://host:port/categories Method - GET
+	 * desc - get all categories 
+	 * URL - http://host:port/categories Method - GET
 	 * payload - None Resp - JSON represention of List<Category>
 	 */
 	@GetMapping
 	public ResponseEntity<?> getCategories() {
 		System.out.println("in get categories");
-		return ResponseEntity.ok(categoryService.getAllCategories());
+		return ResponseEntity.ok(
+				categoryService.getAllCategories());
 	}
 
 	/*
@@ -45,9 +48,10 @@ public class CategoryController {
 	 * (along with id update create nm,desc)
 	 */
 	@PostMapping
-	public ResponseEntity<?> addNewCategory(@RequestBody Category category) {
+	public ResponseEntity<?> addNewCategory(@RequestBody CategoryDTO category) {
 		System.out.println("in add category " + category);
-		return ResponseEntity.status(HttpStatus.CREATED).body(categoryService.addNewCategory(category));
+		return ResponseEntity.status(HttpStatus.CREATED)
+				.body(categoryService.addNewCategory(category));
 	}
 
 	/*
@@ -62,10 +66,13 @@ public class CategoryController {
 	 * API Spec) / Swagger annotation
 	 */
 	@Operation(description = "Get Category details by id ")
-	public ResponseEntity<?> getCategoryDetails(@PathVariable Long categoryId) {
+	public ResponseEntity<?> getCategoryDetails(
+			@PathVariable Long categoryId) {
 		System.out.println("in get category " + categoryId);
 		try {
-			return ResponseEntity.status(HttpStatus.OK).body(categoryService.getCategoryById(categoryId));
+			return ResponseEntity.status(HttpStatus.OK)
+					.body(categoryService.
+							getCategoryById(categoryId));
 		} catch (RuntimeException e) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse(e.getMessage()));
 		}

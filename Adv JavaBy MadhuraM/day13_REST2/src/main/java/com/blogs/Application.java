@@ -15,9 +15,14 @@ public class Application {
 	}
 
 	@Bean // equivalent to <bean id ..../> in xml file
-	public ModelMapper mapper() {
+	public ModelMapper modelMapper() {
 		ModelMapper modelMapper = new ModelMapper();
-		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT)
+		/*
+		 * Meaning - Configuring ModelMapper , to transfer
+		 * MATCHING n NOT NULL props from src --> dest
+		 */
+		modelMapper.getConfiguration()
+		.setMatchingStrategy(MatchingStrategies.STRICT)
 				.setPropertyCondition(Conditions.isNotNull());
 		return modelMapper;
 	}
