@@ -111,6 +111,7 @@ desc;
 select province_id,sum(height) as sum_of_height from patient group by province_id having sum_of_height >=7000;
 select province_id,sum(height) as sum_height from patients group by province_id having sum_height >= 7000;
 
+
 31.Show the difference between the largest weight and smallest weight for patients with the last name 'Maroni'
 select (max(weight)-min(weight)) as weight_delta from patient where last='Maroni';
 select (max(weight)-min(weight)) as weights from patients where last_name='Maroni';
