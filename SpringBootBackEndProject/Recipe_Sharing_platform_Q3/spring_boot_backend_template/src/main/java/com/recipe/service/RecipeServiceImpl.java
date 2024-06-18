@@ -41,14 +41,20 @@ public class RecipeServiceImpl implements RecipeService{
 	@Override
 	public ApiResponse addRecipe(RecipeDto dto) {
 		
-		User user=userrepo.findById(dto.getUserId()).orElseThrow(()->new ResourceNotFoundException("Already Present"));
+		
+		System.out.println("dto "+dto.toString());
+		
+		User user=userrepo.findById(dto.getUserId()).orElseThrow(()->new ResourceNotFoundException("User not found"));
 		
 		Recipe recipe=mapper.map(dto, Recipe.class);
 		
+		System.out.println("recipe "+recipe.toString());
+		
 		recipe.setUser(user);
 		
-		recipeRepo.save(recipe);
+		Recipe save = recipeRepo.save(recipe);
 		
+		System.out.println("after saved "+save.toString());
 		return new ApiResponse("Successfully Added");
 	}
 

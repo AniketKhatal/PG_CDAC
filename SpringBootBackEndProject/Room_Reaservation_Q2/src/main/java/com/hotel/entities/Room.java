@@ -26,7 +26,7 @@ public class Room {
 	private int rnumber;
 	private Type type;
 	private double price;
-	private String availability;
+	private String availability=new String("Yes");
 	
 	public Room(int rnumber, Type type, double price, String availability) {
 		super();
