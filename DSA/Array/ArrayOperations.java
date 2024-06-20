@@ -12,7 +12,7 @@ public class ArrayOperations {
         //   arr=  addElementToPosition(arr,100,5);
 
         //   arr = rightShift(arr, 2);
-
+ 
         arr = leftShift(arr, 1);
         displayArray(arr);
     }
