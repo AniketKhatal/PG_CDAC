@@ -21,3 +21,13 @@ public class LinearSearch{
                 break;
         }
     }
+        if(count==1){
+            System.out.printf("The Element %d is found at position  %d of the array", Ele,index);
+
+        }else{
+            System.out.println("Element Not Found");
+        }
+    
+}
+}
+}
