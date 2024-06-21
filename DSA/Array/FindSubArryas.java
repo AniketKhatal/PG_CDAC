@@ -10,4 +10,8 @@ public class FindSubArryas {
             System.out.println();
         }
     }
+    public static void main(String[] args) {
+        int arr[]={2,4,6,7,9,3};
+        printSubaarray(arr);
+    }
 }
