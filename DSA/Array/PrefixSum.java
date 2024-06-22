@@ -27,3 +27,8 @@ public class PrefixSum {
         System.out.println("Max sum is:" + maxsum);
     }
 
+    public static void main(String[] args) {
+        int Arr[] = {4, 5, 6, 9, 8, -7};
+        maxsubarraysum(Arr);
+    }
+}
