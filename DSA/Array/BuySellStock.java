@@ -15,7 +15,6 @@ public class BuySellStock {
     }
     public static void main(String[] args) {
         int Price[]={1,9,77,3,66,4,99};
-        buyandsellStock(Price);
-
+        System.err.println(buyandsellStock(Price));
     }
 }
