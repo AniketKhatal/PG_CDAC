@@ -13,7 +13,7 @@ public class FirstStack {
     }
     //pop
     public static int pop(){
-        if(isEmpty()){
+        if(isEmpty()){   //for charcking the Array Empty or not
             return -1;
         }
         int top=list.get(list.size()-1);
@@ -22,7 +22,7 @@ public class FirstStack {
     }
     //peek
     public static int peek(){
-        if(isEmpty()){
+        if(isEmpty()){   //for charcking the Array Empty or not
             return -1;
         }
         return list.get(list.size()-1);
