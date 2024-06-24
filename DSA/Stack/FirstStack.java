@@ -22,7 +22,7 @@ public class FirstStack {
     }
     //peek
     public static int peek(){
-        if(isEmpty()){   //for charcking the Array Empty or not
+        if(isEmpty()){   //for charcking the Array Empty or not3
             return -1;
         }
         return list.get(list.size()-1);
