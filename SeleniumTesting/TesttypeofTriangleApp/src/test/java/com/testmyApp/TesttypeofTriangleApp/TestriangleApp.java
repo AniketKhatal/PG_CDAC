@@ -13,6 +13,7 @@ public class TestriangleApp {
 		driver.navigate().to("http://127.0.0.1:5500/HTML/TypeOftriangle.html");
 		driver.manage().window().maximize();
 		
+		
 		//send the side1 length
 		driver.findElement(By.id("side1")).sendKeys("22");
 		
