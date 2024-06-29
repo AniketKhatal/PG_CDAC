@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class FirstQueue {
     private int[] arr;
     private int front;
@@ -6,7 +8,7 @@ class FirstQueue {
     private int count;
 
     // Constructor to initialize the queue
-    public Queue(int size) {
+    public FirstQueue(int size) {
         arr = new int[size];
         capacity = size;
         front = 0;
@@ -62,28 +64,33 @@ class FirstQueue {
     }
 
     public static void main(String[] args) {
-        Queue q = new Queue(5);
+        
+        try(Scanner sc=new Scanner(System.in)){
+            System.out.println("Enter the size of the queue:");
+            FirstQueue q = new FirstQueue(sc.nextInt());   //i/p the size of the queue
 
-        q.enqueue(1);
-        q.enqueue(2);
-        q.enqueue(3);
-        q.enqueue(4);
-        q.enqueue(5);
+            //Input the element into the queue
+            System.out.println("Enter the Element into the queue:");
+            for(int i=0;i<q.capacity;i++){
+                int ele=sc.nextInt();
+                q.enqueue(ele);
+            }
 
-        System.out.println("Front element is: " + q.peek());
-        q.dequeue();
-        System.out.println("Front element is: " + q.peek());
+            //print the front element of the queue
+            System.out.println("Front element is: " + q.peek());
+            q.dequeue();   //Remove one element
+            System.out.println("Front element after removing one ele is: " + q.peek());   //Again print the peek
+            System.out.println("Enter the new Eleement:");
+            q.enqueue(sc.nextInt());  //add the element
+            System.out.println("Queue size is " + q.size());    //Print the size of the Queue
 
-        q.enqueue(6);
+            //remove all element from the queue
+            for(int i=0;i<q.capacity;i++){
+                q.dequeue();
+            }
 
-        System.out.println("Queue size is " + q.size());
-
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-
-        System.out.println("Queue is empty: " + q.isEmpty());
+            //Check the Queue is empty or not
+            System.out.println("Queue is empty: " + q.isEmpty());
+        }
     }
 }
