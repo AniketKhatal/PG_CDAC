@@ -14,6 +14,7 @@ public class QueueExUsingLinkedList {
     
             // Dequeue elements
             System.out.println("Removed element: " + q.remove());
+            //print the queue
             System.out.println("Front element is: " + q.peek());
     
             // Check if queue is empty
