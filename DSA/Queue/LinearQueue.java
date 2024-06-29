@@ -8,12 +8,14 @@
   Full: When count equals capacity.
   q Empty: When count is 0.
  */
-public class LinearQueue {
+import java.util.Scanner;
+
+class LinearQueue {
     private int[] arr;
     private int front;
     private int rear;
-    private int count;
     private int capacity;
+    private int count;
 
     // Constructor to initialize the queue
     public LinearQueue(int size) {
@@ -30,7 +32,7 @@ public class LinearQueue {
             System.out.println("Overflow: Queue is full.");
             return;
         }
-        rear = (rear + 1) % capacity;
+        rear++;
         arr[rear] = item;
         count++;
     }
@@ -42,7 +44,11 @@ public class LinearQueue {
             return -1;
         }
         int item = arr[front];
-        front = (front + 1) % capacity;
+        // Shift all elements to the left by one position
+        for (int i = 0; i < rear; i++) {
+            arr[i] = arr[i + 1];
+        }
+        rear--;
         count--;
         return item;
     }
@@ -72,28 +78,33 @@ public class LinearQueue {
     }
 
     public static void main(String[] args) {
-        LinearQueue q = new LinearQueue(5);
+        
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the size of the queue:");
+            LinearQueue q = new LinearQueue(sc.nextInt());   // Input the size of the queue
 
-        q.enqueue(1);
-        q.enqueue(2);
-        q.enqueue(3);
-        q.enqueue(4);
-        q.enqueue(5);
+            // Input the element into the queue
+            System.out.println("Enter the elements into the queue:");
+            for (int i = 0; i < q.capacity; i++) {
+                int ele = sc.nextInt();
+                q.enqueue(ele);
+            }
 
-        System.out.println("Front element is: " + q.peek());
-        q.dequeue();
-        System.out.println("Front element is: " + q.peek());
+            // Print the front element of the queue
+            System.out.println("Front element is: " + q.peek());
+            q.dequeue();   // Remove one element
+            System.out.println("Front element after removing one element is: " + q.peek());   // Again print the peek
+            System.out.println("Enter the new element:");
+            q.enqueue(sc.nextInt());  // Add the element
+            System.out.println("Queue size is " + q.size());    // Print the size of the Queue
 
-        q.enqueue(6);
+            // Remove all elements from the queue
+            while (!q.isEmpty()) {
+                q.dequeue();
+            }
 
-        System.out.println("Queue size is " + q.size());
-
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-        q.dequeue();
-
-        System.out.println("Queue is empty: " + q.isEmpty());
+            // Check if the queue is empty
+            System.out.println("Queue is empty: " + q.isEmpty());
+        }
     }
 }
