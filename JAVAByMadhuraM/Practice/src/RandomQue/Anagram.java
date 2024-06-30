@@ -1,4 +1,4 @@
-package Randomque;
+package RandomQue;
 //input of string :NANA
 //Output =anan i.e. true
 import java.util.Scanner;

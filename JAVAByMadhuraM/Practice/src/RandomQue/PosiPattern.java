@@ -1,4 +1,4 @@
-package Randomque;
+package RandomQue;
 /*
 I/p:
  num=5
