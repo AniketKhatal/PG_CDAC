@@ -23,4 +23,8 @@ public class ShortestPath {
         int y2=y*y;
         return (float)Math.sqrt(x2+y2);
     }
+    public static void main(String[] args) {
+        String path="ns";
+        getShortestPath(path);
+    }
 }
