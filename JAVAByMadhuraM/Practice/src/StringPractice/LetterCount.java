@@ -23,7 +23,8 @@ public class LetterCount{
     return sb.toString();
 }
     public static void main(String[] args) {
-        String str="aaabbcdderrr";
-        System.out.println(compress(str));        
+       // String str="aaabbcdderrr";
+        String str="abcd";
+       System.out.println(compress(str));        
     }
 }
