@@ -1,6 +1,4 @@
 
-import java.lang.classfile.instruction.CharacterRange;
-
 //I/p=hi,myname is aniket g khatal patil
 //o/p=Hi,My Name Is Aniket G khatal Patil
 public class FirstLetterUpper {
