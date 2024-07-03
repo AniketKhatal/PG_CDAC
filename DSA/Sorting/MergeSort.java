@@ -1,6 +1,6 @@
 //Implementing the MergeSort
 
-import java.util.*;
+import java.util.Scanner;
 public class MergeSort {
     public static void mergeSort(int[] arr, int l, int r) {
         if (l < r) {
@@ -79,6 +79,7 @@ public class MergeSort {
                 for (int num : arr) {
                     System.out.print(num + " ");
                     }
+                    
         }
     }
 }
