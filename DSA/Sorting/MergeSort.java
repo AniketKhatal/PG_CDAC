@@ -78,8 +78,7 @@ public class MergeSort {
                 System.out.println("Sorted array using Merge Sort:");
                 for (int num : arr) {
                     System.out.print(num + " ");
-                    }
-                    
+                    }      
         }
     }
 }
