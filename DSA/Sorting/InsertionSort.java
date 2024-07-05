@@ -3,14 +3,16 @@ public class InsertionSort {
     public static void insertionSort(int[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
-            int key = arr[i];  //11
-            int j = i - 1;   //12
-            // Move elements of arr[0..i-1], that are greater than key, to one position ahead of their current position
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j = j - 1;  //index --
+            int curr = arr[i];  //11
+            int prev = i - 1;   //12
+            // Move elements of arr[0..i-1], that are greater than curr, to one position ahead of their current position
+            //Finding out the correct position to insert 
+            while (prev >= 0 && arr[prev] > curr) {
+                arr[prev + 1] = arr[prev];
+                prev -= 1;  //index --
             }
-            arr[j + 1] = key;
+            //Insertion
+            arr[prev + 1] = curr;
         }
     }
 
