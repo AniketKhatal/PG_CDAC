@@ -15,7 +15,9 @@ namespace Loops
 
             switch (ch)
             {
+                //For Loop
                 case 1:
+                    Console("Enter teh   ")
                     break;
                 case 2:
                     break;
