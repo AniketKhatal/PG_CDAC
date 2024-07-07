@@ -59,7 +59,39 @@ namespace Loops
 
                     //Do-while
                 case 4:
+                    Console.Write("Enter the limit: ");
+                    int limit = Convert.ToInt32(Console.ReadLine());
+                    int number1 = 2; // Start from the first prime number
 
+                    Console.WriteLine("Prime numbers from 2 to {0} are:", limit);
+
+                    do
+                    {
+                        if (IsPrime(number1))
+                        {
+                            Console.WriteLine(number1);
+                        }
+                        number1++;
+                    }
+                    while (number1 <= limit);
+              
+                    static bool IsPrime(int num)
+                    {
+                         if (num < 2)
+                         {
+                             return false;
+                         }
+
+                        for (int i = 2; i *i <= num; i++)
+                        {
+                            if (num % i == 0)
+                            {
+                                return false;
+                            }
+                        }
+
+                        return true;
+                    }
                     break;
 
                 default:
