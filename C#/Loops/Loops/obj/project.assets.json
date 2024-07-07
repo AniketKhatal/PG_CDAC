@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anike\\source\\repos\\Loops\\Loops\\Loops.csproj",
+      "projectUniqueName": "D:\\PG_CDAC\\PG_DAC\\C#\\Loops\\Loops\\Loops.csproj",
       "projectName": "Loops",
-      "projectPath": "C:\\Users\\anike\\source\\repos\\Loops\\Loops\\Loops.csproj",
+      "projectPath": "D:\\PG_CDAC\\PG_DAC\\C#\\Loops\\Loops\\Loops.csproj",
       "packagesPath": "C:\\Users\\anike\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anike\\source\\repos\\Loops\\Loops\\obj\\",
+      "outputPath": "D:\\PG_CDAC\\PG_DAC\\C#\\Loops\\Loops\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\anike\\AppData\\Roaming\\NuGet\\NuGet.Config",

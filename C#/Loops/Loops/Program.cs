@@ -17,7 +17,12 @@ namespace Loops
             {
                 //For Loop
                 case 1:
-                    Console("Enter teh   ")
+                    Console.WriteLine("Enter the number to print the table:");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    for(int i = 1; i <= 10; i++)
+                    {
+                        Console.WriteLine($"{num} * {i} = {num * i}");
+                    }
                     break;
                 case 2:
                     break;
@@ -25,8 +30,10 @@ namespace Loops
                     break;
                 case 4:
                     break;
+
                 default:
                     Console.WriteLine("Please!Enter the appropriate Choice");
+                    break;
             }
         }
     }
