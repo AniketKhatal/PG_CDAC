@@ -1,11 +1,13 @@
 ﻿//Inheritence
 
 
+using System.Security.Cryptography.X509Certificates;
+
 namespace AssignmentNo3
 {
     internal class EmployeeMgnt
     {
-       abstract class Employee
+       public abstract class Employee
         {
             private string name;
             private string Name
@@ -16,7 +18,7 @@ namespace AssignmentNo3
                     {
                         this.name = value;
                     }
-                    else throw new Exception("No blanks")
+                    else throw new Exception("No blanks");
                 }
             }
             //for autogeneration
@@ -37,10 +39,27 @@ namespace AssignmentNo3
                     }
                 }
             }
-            public Employee(string name,short deptNo=0)
+            private int sal;
+            private int Sal
             {
-                this.Name = name;
+                set
+                {
+                    if (value > 1000)
+                    {
+                        this.sal = value;
+                    }
+                }
+                get
+                {
+                    return this.sal;
+                }
+            }
+            //Constructor
+            public Employee(string name,short deptNo=0,int sal)
+            {
+                this.name = name;
                 this.DeptNo = deptNo;
+                this.sal = sal; 
                 Empno++;
             }
             public abstract decimal Basic { set; get; }
@@ -64,15 +83,50 @@ namespace AssignmentNo3
                     }
                 }
             }
-            public Manager(string name,short deptNo,string designation)
+            public Manager(string name, short deptNo, string designation) : base(name, deptNo,sal)
             {
-                Designation = designation;
+                {
+                    this.designation = designation;
+                }
+            }
+            public override decimal Basic { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public override decimal CalcNetSalary()
+            {
+                return Basic * 25;
+            }
+        }
+
+        public class GeneralManager : Manager
+        {
+            private string Perks;
+
+            public GeneralManager(string name,short deptNo,string designation,string Perks) : base(name, deptNo,sal, designation)
+            {
+                this.Perks = Perks;
+            }
+            public override decimal Basic { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public override decimal CalcNetSalary()
+            {
+                return Basic * 25;
             }
 
         }
+
+        public class CEO : Employee
+        {
+            public CEO(string name, short deptNo) : base(name, deptNo,sal)
+            {
+            }
+            public override decimal Basic { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            //sealded the method for preventing the further implementation
+            public sealed override decimal CalcNetSalary()
+            {
+                return Basic * 25;
+            }
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
         }
     }
 }
