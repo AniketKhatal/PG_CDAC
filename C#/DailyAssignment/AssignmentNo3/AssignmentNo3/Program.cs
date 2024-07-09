@@ -57,10 +57,11 @@ namespace AssignmentNo3
             //Constructor
             public Employee(string name,short deptNo=0,int sal)
             {
+                Empno++;
                 this.name = name;
                 this.DeptNo = deptNo;
                 this.sal = sal; 
-                Empno++;
+               
             }
             public abstract decimal Basic { set; get; }
             public abstract decimal CalcNetSalary();
@@ -83,7 +84,7 @@ namespace AssignmentNo3
                     }
                 }
             }
-            public Manager(string name, short deptNo, string designation) : base(name, deptNo,sal)
+            public Manager(string name, short deptNo, string designation,int sal) : base(name, deptNo,sal)
             {
                 {
                     this.designation = designation;
@@ -100,7 +101,7 @@ namespace AssignmentNo3
         {
             private string Perks;
 
-            public GeneralManager(string name,short deptNo,string designation,string Perks) : base(name, deptNo,sal, designation)
+            public GeneralManager(string name,short deptNo,string designation,string Perks,int sal) : base(name, deptNo,sal, designation)
             {
                 this.Perks = Perks;
             }
@@ -114,7 +115,7 @@ namespace AssignmentNo3
 
         public class CEO : Employee
         {
-            public CEO(string name, short deptNo) : base(name, deptNo,sal)
+            public CEO(string name, short deptNo,int sal) : base(name, deptNo,sal)
             {
             }
             public override decimal Basic { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -124,9 +125,14 @@ namespace AssignmentNo3
                 return Basic * 25;
             }
         }
+        public override string? ToString()
+        {
+            return base.ToString();
+        }
         static void Main(string[] args)
         {
-            
+
+    
         }
     }
 }
