@@ -3,8 +3,7 @@
   "WorkspaceRootPath": "D:\\PG_CDAC\\PG_DAC\\C#\\FilehandlingSwitchCase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD8DAF94-4D05-4F07-BCC0-E2B9ACACDE54}|FilehandlingSwitchCase\\FilehandlingSwitchCase.csproj|d:\\pg_cdac\\pg_dac\\c#\\filehandlingswitchcase\\filehandlingswitchcase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD8DAF94-4D05-4F07-BCC0-E2B9ACACDE54}|FilehandlingSwitchCase\\FilehandlingSwitchCase.csproj|solutionrelative:filehandlingswitchcase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\anike\\AppData\\Local\\Temp\\.vsdbgsrc\\7db9e9482fd816968a2a1f2ad76f948e4a2590c75130c49e46800ea91a3f9604\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,14 +23,12 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\PG_CDAC\\PG_DAC\\C#\\FilehandlingSwitchCase\\FilehandlingSwitchCase\\Program.cs",
-              "RelativeDocumentMoniker": "FilehandlingSwitchCase\\Program.cs",
-              "ToolTip": "D:\\PG_CDAC\\PG_DAC\\C#\\FilehandlingSwitchCase\\FilehandlingSwitchCase\\Program.cs",
-              "RelativeToolTip": "FilehandlingSwitchCase\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACUAAAAmAAAA",
+              "DocumentMoniker": "C:\\Users\\anike\\AppData\\Local\\Temp\\.vsdbgsrc\\7db9e9482fd816968a2a1f2ad76f948e4a2590c75130c49e46800ea91a3f9604\\Program.cs",
+              "ToolTip": "C:\\Users\\anike\\AppData\\Local\\Temp\\.vsdbgsrc\\7db9e9482fd816968a2a1f2ad76f948e4a2590c75130c49e46800ea91a3f9604\\Program.cs [Read Only]",
+              "ViewState": "AQIAABIAAAAAAAAAAAAwwBwAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T01:24:46.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T02:20:52.446Z",
+              "EditorCaption": " [Read Only]"
             }
           ]
         }

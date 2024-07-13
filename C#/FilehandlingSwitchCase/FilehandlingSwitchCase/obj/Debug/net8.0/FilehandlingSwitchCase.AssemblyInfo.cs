@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FilehandlingSwitchCase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d1d9b212cca593c1d06682d401fff7400b40c65")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bac805c24a9da7cb06f98a561f3146b7cec25bbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("FilehandlingSwitchCase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FilehandlingSwitchCase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
