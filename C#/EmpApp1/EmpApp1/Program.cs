@@ -17,7 +17,7 @@ namespace EmpApp1
         {
             // Connection string to connect to the LocalDB instance
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ActsJuly2024;Integrated Security=True;";
-
+            //Usin Statement for Resource Deallocation of the recources5   
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
