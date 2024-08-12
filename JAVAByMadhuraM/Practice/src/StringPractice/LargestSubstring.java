@@ -1,5 +1,4 @@
 //To print the largest string by lexico order
-
 public class LargestSubstring {
     public static void main(String[] args) {
         String fruits[]={"apple","mango","banana"};

@@ -1,0 +1,10 @@
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\EmployeeManagementApp.csproj.AssemblyReference.cache
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\EmployeeManagementApp.csproj.CoreCompileInputs.cache
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\EmployeeManagementApp.exe.config
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\EmployeeManagementApp.exe
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\EmployeeManagementApp.pdb
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\System.Data.SqlClient.dll
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\bin\Debug\System.Data.SqlClient.xml
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\Employee.8111CF64.Up2Date
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\EmployeeManagementApp.exe
+C:\Users\anike\Desktop\netfullcode\QUESTION2\EmployeeManagementApp\EmployeeManagementApp\obj\Debug\EmployeeManagementApp.pdb

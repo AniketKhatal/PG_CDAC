@@ -1,5 +1,4 @@
 //To check the working of the == and equals in string
-
 public class EqualOrEquals{
     public static void main(String[] args) {
        String str1="Ram";
