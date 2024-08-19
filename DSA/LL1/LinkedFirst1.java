@@ -15,12 +15,14 @@ public class LinkedFirst1 {
     // We have only one head and tail in a linked list, that's why we declare them as properties inside the class
     public static Node head;
     public static Node tail;
+    //define static variable for size
+    public static int size;   //java bydefault initialize it to 0
 
     // Adding an element to the start of the Linked list
     public void addFirst(int data) {
         // Step 1: Create the new node
         Node newNode = new Node(data);
-
+        size++;
         if (head == null) {
             head = tail = newNode;
             return;
@@ -36,6 +38,7 @@ public class LinkedFirst1 {
     public void addLast(int data){
         //step1: create the new node
         Node newNode=new Node(data);
+        size++;
         if(head==null){
             head=tail=newNode;
             return;
@@ -51,6 +54,7 @@ public class LinkedFirst1 {
             return;
         }
         Node newNode=new Node(data);   //crate a new node
+        size++;
         Node temp=head;
         int i=0;  //to track temp ,rightnow where excatly the temp is
         //loop to find the previous
@@ -81,5 +85,6 @@ public class LinkedFirst1 {
         ll.addLast(55);
         ll.addMiddle(2,9);
         ll.printList();
+        System.out.println(ll.size);
     }
 }
