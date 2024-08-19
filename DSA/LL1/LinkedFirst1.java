@@ -32,6 +32,37 @@ public class LinkedFirst1 {
         head = newNode;
     }
 
+    //Method to add the element at the end of the LinkedList
+    public void addLast(int data){
+        //step1: create the new node
+        Node newNode=new Node(data);
+        if(head==null){
+            head=tail=newNode;
+            return;
+        }
+        tail.next=newNode;
+        tail=newNode;
+    }
+    //Method to add element into the middle of the linkedList
+    public void addMiddle(int index,int data){
+        //if i want to add the node at the first
+        if(index==0){
+            addFirst(data);
+            return;
+        }
+        Node newNode=new Node(data);   //crate a new node
+        Node temp=head;
+        int i=0;  //to track temp ,rightnow where excatly the temp is
+        //loop to find the previous
+        while(i < index-1){
+            temp=temp.next;
+            i++;
+        }
+
+        //i=index-1 ; temp -> prev
+        newNode.next = temp.next;
+        temp.next= newNode;
+    }
     // Method to print the linked list
     public void printList() {
         Node current = head;
@@ -46,6 +77,9 @@ public class LinkedFirst1 {
         LinkedFirst1 ll = new LinkedFirst1();
         ll.addFirst(1);
         ll.addFirst(2);
-        ll.printList(); // Output should be: 2 -> 1 -> null
+        ll.addLast(44);
+        ll.addLast(55);
+        ll.addMiddle(2,9);
+        ll.printList();
     }
 }
