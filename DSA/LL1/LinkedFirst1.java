@@ -67,6 +67,21 @@ public class LinkedFirst1 {
         newNode.next = temp.next;
         temp.next= newNode;
     }
+    //Method to remove the element from the start
+    public int removeFirst(){
+        //case if the linked list empty
+        if (size == 0){
+            System.out.println("LinkedList is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head= tail =null;
+            return val;
+        }
+        int val=head.data;
+        head=head.next;
+        return val;
+    }
     // Method to print the linked list
     public void printList() {
         Node current = head;
@@ -86,5 +101,7 @@ public class LinkedFirst1 {
         ll.addMiddle(2,9);
         ll.printList();
         System.out.println(ll.size);
+        System.out.println(ll.removeFirst());
+        ll.printList();
     }
 }
