@@ -76,11 +76,50 @@ public class LinkedFirst1 {
         } else if (size == 1) {
             int val = head.data;
             head= tail =null;
+            size=0;
             return val;
         }
         int val=head.data;
         head=head.next;
+        size--;
         return val;
+    }
+    //Method to remove the node from the last
+    public int removeLast(){
+        if(size==0){
+            System.out.println("Linked List is empty");
+        } else if (size==1) {
+            int val=head.data;
+            head=tail=null;
+            size--;
+            return val;
+        }
+        //prev :i=size-2
+        Node prev = head;
+        for(int i=0;i<size-2;i++){
+            prev=prev.next;
+        }
+
+        int val=prev.next.data;  //we can also write tail.data
+        prev.next=null;
+        tail=prev;
+        size--;
+        return val;
+    }
+    //Method for to search an perticular key present or not
+    public int itrSearch(int key){   //timecomplexity= O(n)
+        Node temp=head;
+        int i=0;
+
+        while(temp!=null){
+            if(temp.data == key){
+                return i;
+            }
+            temp=temp.next;
+            i++;
+        }
+        //Key not found
+        return -1;
     }
     // Method to print the linked list
     public void printList() {
@@ -100,8 +139,10 @@ public class LinkedFirst1 {
         ll.addLast(55);
         ll.addMiddle(2,9);
         ll.printList();
-        System.out.println(ll.size);
+       //  System.out.println(ll.size);
         System.out.println(ll.removeFirst());
+        System.out.println(ll.removeLast());
         ll.printList();
+        System.out.println(ll.itrSearch(9));
     }
 }
