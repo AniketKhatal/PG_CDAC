@@ -18,6 +18,7 @@ class PrintSubString{
             System.out.println("Enter the Ending index:");
             int end=sc.nextInt();
             printsubStr(str,start,end);
+            System.out.println(str.substring(start,end));   //you can also used the inbuild method
         }
     }
 }
