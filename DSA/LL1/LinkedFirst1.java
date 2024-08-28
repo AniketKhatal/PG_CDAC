@@ -121,6 +121,20 @@ public class LinkedFirst1 {
         //Key not found
         return -1;
     }
+    //Method for Reverse the linked list
+    public void reverse(){
+        Node prev=null;
+        Node curr=tail=head;
+        Node next;
+
+        while(curr != null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
+    }
     // Method to print the linked list
     public void printList() {
         Node current = head;
@@ -144,5 +158,7 @@ public class LinkedFirst1 {
         System.out.println(ll.removeLast());
         ll.printList();
         System.out.println(ll.itrSearch(9));
+        ll.reverse();
+        ll.printList();
     }
 }
